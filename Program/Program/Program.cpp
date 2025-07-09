@@ -102,7 +102,7 @@ public:
 			while (currnetNode->next != nullptr)
 			{
 				previousNode = currnetNode;
-				currnetNode= currnetNode->next; //마지막 노드까지 이동
+				currnetNode = currnetNode->next; //마지막 노드까지 이동
 			}
 			delete currnetNode; //마지막 노드 삭제
 			previousNode->next = nullptr; //마지막 노드의 next를 nullptr로 설정
@@ -110,7 +110,10 @@ public:
 		}
 	}
 
-
+	bool empty()
+	{
+		return (head == nullptr);
+	}
 
 	~List();
 
@@ -146,6 +149,8 @@ int main()
 	list.push_front(20);
 	list.push_back(25);
 	list.pop_back();
+
+	cout << list.empty() << endl;
 
 };
 
