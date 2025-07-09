@@ -30,6 +30,7 @@ public:
 		head = NULL;
 		tail = NULL;
 
+
 	}
 
 
