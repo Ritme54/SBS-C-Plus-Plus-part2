@@ -43,7 +43,7 @@ public:
 		if (head == nullptr)
 		{
 			cout << "List is empty" << endl;
-
+			return;
 		}
 		else
 		{
