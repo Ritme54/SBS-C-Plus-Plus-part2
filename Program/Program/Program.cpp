@@ -2,93 +2,124 @@
 
 
 
-#define SIZE 10
-
 using namespace std;
 
-template<typename T>
-class AdjacencyList
-{
 
+
+
+template <typename T>
+class Set
+{
 private:
 
 	struct Node
 	{
-		T data;
-		Node* next;
+		Node* left;
+		Node* right;
+		int data;
 
-		Node(T data, Node* link = nullptr)
-		{
-			this->data = data;
-			next = link;
-		}
 	};
+	int size;
+	Node* root;
+	Node* currentNode;
 
-	int size; // 정점의 개수
-	T vertex[SIZE]; // 정점의 집합
-	Node* list[SIZE];
+	Node* createNode(T data)
+	{
+		Node* newNode = new Node;
+
+		newNode->data = data;
+		newNode->left = nullptr;
+		newNode->right = nullptr;
+		size++;
+
+		return newNode;
+
+	}
+
+
 public:
-
-	AdjacencyList()
+	Set()
 	{
 		size = 0;
-		for (int i = 0; i < SIZE; i++)
-		{
-			list[i] = NULL;
-			vertex[i] = NULL;
-		}
+		root = nullptr;
+		
+	}
+	~Set()
+	{
+		release(root);
 	}
 
-	void push(T data)
+
+
+	void insert(T data)
 	{
-		if (size>=SIZE)
+
+		if (root == nullptr)
 		{
-			cout << "overflow" << endl;
+			root = createNode(data);
 		}
 		else
 		{
-			vertex[size++] = data;
+			Node* currentNode = root;
 
+			while (currentNode != nullptr)
+				if (currentNode->data > data)
+				{
+					return;
+				}
+				else if (currentNode->data == data)
+				{
+					if (currentNode->left == nullptr)
+					{
+						currentNode->left = createNode(data);
+						return;
+					}
+					else
+					{
+						currentNode = currentNode->left;
+					}
+
+				}
+				else
+				{
+					if (currentNode->right == nullptr)
+					{
+						currentNode->right = createNode(data);
+						return;
+					}
+					else
+					{
+						currentNode = currentNode->right;
+					}
+				}
 		}
 	}
-
-	void edge(int i, int j)
+	void release(Node* root) 
 	{
-		if (size <= 0)
+		if (root != nullptr)
 		{
-			cout << "adjancency matrix is empty" << endl;
-		}
-		else if (i >= size || j >= size)
-		{
-			cout << "index out of range" << endl;
-		}
-		else
-		{
-			list[i] = new Node(vertex[j], list[i]);
-			list[j] = new Node(vertex[i], list[j]);
+			release(root->left);
+			release(root->right);
+
+			delete root;
 		}
 
 	}
-	~AdjacencyList()
-	{
-		for (int i = 0; i < SIZE; i++)
-		{
-			if (list[i] !=nullptr)
-			{
-				delete[] list[i];
-			}
-		}
-	}
+
 
 };
 
-
-
 int main()
 {
+	Set<int> tree;
+
+	tree.insert(10);
+	
 
 
-	return 0;
+
+
+
+
+
 }
-
-

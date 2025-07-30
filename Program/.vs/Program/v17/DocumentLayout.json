@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{59993851-D390-44B4-A2E8-B9AD2236DD8E}|Program\\Program.vcxproj|solutionrelative:Program\\Program.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{66504E4A-7FF9-4E9D-A2E3-6E5141AE7FD8}|Class6th(AdjacencyList)\\Class6th(AdjacencyList).vcxproj|C:\\Users\\Administrator\\Desktop\\sbs-c--\\SBS-C-Plus-Plus-part2\\Program\\Class6th(AdjacencyList)\\Class6th(AdjacencyList).cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{66504E4A-7FF9-4E9D-A2E3-6E5141AE7FD8}|Class6th(AdjacencyList)\\Class6th(AdjacencyList).vcxproj|solutionrelative:Class6th(AdjacencyList)\\Class6th(AdjacencyList).cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{955AB248-F6F1-4BB1-9F7F-449A517FE9C7}|class5\\class5.vcxproj|C:\\Users\\Administrator\\Desktop\\sbs-c--\\SBS-C-Plus-Plus-part2\\Program\\class5\\class5.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{955AB248-F6F1-4BB1-9F7F-449A517FE9C7}|class5\\class5.vcxproj|solutionrelative:class5\\class5.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -26,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,7 +38,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "Class6th(AdjacencyList).cpp",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\sbs-c--\\SBS-C-Plus-Plus-part2\\Program\\Class6th(AdjacencyList)\\Class6th(AdjacencyList).cpp",
+              "RelativeDocumentMoniker": "Class6th(AdjacencyList)\\Class6th(AdjacencyList).cpp",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\sbs-c--\\SBS-C-Plus-Plus-part2\\Program\\Class6th(AdjacencyList)\\Class6th(AdjacencyList).cpp",
+              "RelativeToolTip": "Class6th(AdjacencyList)\\Class6th(AdjacencyList).cpp",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAgwIQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-07-30T04:45:27.293Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Class1th (Single Linked List).cpp",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\sbs-c--\\SBS-C-Plus-Plus-part2\\Program\\Class1th (Single Linked List)\\Class1th (Single Linked List).cpp",
               "RelativeDocumentMoniker": "Class1th (Single Linked List)\\Class1th (Single Linked List).cpp",
@@ -42,18 +59,17 @@
               "RelativeToolTip": "Class1th (Single Linked List)\\Class1th (Single Linked List).cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-07-18T04:18:01.378Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-18T04:18:01.378Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "class5.cpp",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\sbs-c--\\SBS-C-Plus-Plus-part2\\Program\\class5\\class5.cpp",
               "RelativeDocumentMoniker": "class5\\class5.cpp",
               "ToolTip": "C:\\Users\\Administrator\\Desktop\\sbs-c--\\SBS-C-Plus-Plus-part2\\Program\\class5\\class5.cpp",
               "RelativeToolTip": "class5\\class5.cpp",
-              "ViewState": "AgIAAGUAAAAAAAAAAAAAAGwAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAGwAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-07-29T05:04:11.775Z",
               "EditorCaption": ""
@@ -66,14 +82,14 @@
               "RelativeDocumentMoniker": "Program\\Program.cpp",
               "ToolTip": "C:\\Users\\Administrator\\Desktop\\sbs-c--\\SBS-C-Plus-Plus-part2\\Program\\Program\\Program.cpp",
               "RelativeToolTip": "Program\\Program.cpp",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAAAFIAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAtwGAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-07-17T06:47:05.495Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Class4th(vector).cpp",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\sbs-c--\\SBS-C-Plus-Plus-part2\\Program\\Class4th(vector)\\Class4th(vector).cpp",
               "RelativeDocumentMoniker": "Class4th(vector)\\Class4th(vector).cpp",
