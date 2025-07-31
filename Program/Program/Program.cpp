@@ -16,7 +16,7 @@ private:
 	{
 		Node* left;
 		Node* right;
-		int data;
+		T data;
 
 	};
 	int size;
@@ -42,11 +42,15 @@ public:
 	{
 		size = 0;
 		root = nullptr;
-		
 	}
 	~Set()
 	{
+
+
 		release(root);
+		this->root = nullptr;
+		size = 0;
+
 	}
 
 
@@ -57,56 +61,139 @@ public:
 		if (root == nullptr)
 		{
 			root = createNode(data);
+			size++;
+			cout << "값 : " << data << endl;
+			return;
+		}
+		Node* currentNode = root;
+		Node* parentNode = nullptr;
+
+		while (currentNode != nullptr)
+		{
+			parentNode = currentNode;
+
+			if (data < currentNode->data)
+			{
+				currentNode = currentNode->left;
+
+			}
+			else if (data > currentNode->data)
+
+			{
+				currentNode = currentNode->right;
+			}
+			else
+			{
+				return;
+			}
+		}
+		if (data < parentNode->data)
+		{
+			parentNode->left = createNode(data);
+
+		}
+		else		
+		{
+			parentNode->right = createNode(data);
+		}
+		size++;
+		cout << "값 : " << data << endl;
+		return;
+
+	}
+
+	void erase(T data)
+	{
+
+
+		if (root == nullptr)
+		{
+			cout << "set is empty" << endl;
 		}
 		else
 		{
 			Node* currentNode = root;
+			Node* parentNode = nullptr;
 
-			while (currentNode != nullptr)
-				if (currentNode->data > data)
+			while (currentNode != nullptr && currentNode->data != data)
+			{
+				if (data < currentNode->data)
 				{
+					parentNode = currentNode;
+					currentNode = currentNode->left;
+				}
+				else if (data > currentNode->data)
+				{
+					parentNode = currentNode;
+					currentNode = currentNode->right;
+
+				}
+
+			}
+			if (currentNode == nullptr)
+			{
+				cout << "no data" << "";
+
+			}
+			else if (currentNode->left == nullptr && currentNode->right == nullptr)
+			{
+				if (parentNode != nullptr)
+				{
+					if (parentNode->left == currentNode)
+					{
+						parentNode->left = nullptr;
+					}
+					else if (parentNode->right == currentNode)
+					{
+						parentNode->right = nullptr;
+					}
+
+					delete currentNode;
+					size--;
 					return;
 				}
-				else if (currentNode->data == data)
+			}
+			else if ((currentNode->left == nullptr || currentNode->right == nullptr))
+			{
+				Node* childNode = (currentNode->left != nullptr) ? currentNode->left : currentNode->right;
+				if (parentNode == nullptr)
 				{
-					if (currentNode->left == nullptr)
-					{
-						currentNode->left = createNode(data);
-						return;
-					}
-					else
-					{
-						currentNode = currentNode->left;
-					}
-
+					root = childNode;
 				}
 				else
 				{
-					if (currentNode->right == nullptr)
+					if (parentNode->left == currentNode)
 					{
-						currentNode->right = createNode(data);
-						return;
+						parentNode->left = childNode;
 					}
 					else
 					{
-						currentNode = currentNode->right;
+						parentNode->right = childNode;
 					}
+					delete currentNode;
+					cout << "삭제"<< data << endl;
+					size--;
+					return;
+
 				}
+
+			}
+
+
+
 		}
 	}
-	void release(Node* root) 
+	void release(Node* rootnode)
 	{
-		if (root != nullptr)
+		if (rootnode != nullptr)
 		{
-			release(root->left);
-			release(root->right);
+			release(rootnode->left);
+			release(rootnode->right);
 
-			delete root;
+			delete rootnode;
 		}
 
 	}
-
-
 };
 
 int main()
@@ -114,11 +201,23 @@ int main()
 	Set<int> tree;
 
 	tree.insert(10);
-	
+	tree.insert(15);
+	tree.insert(7);
+	tree.insert(33);
+
+	tree.insert(5);
+	tree.insert(13);
+	tree.erase(7);
 
 
 
 
+
+
+
+
+
+	return 0;
 
 
 
