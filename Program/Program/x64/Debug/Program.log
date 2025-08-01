@@ -1,2 +1,7 @@
 ﻿  Program.cpp
-  Program.vcxproj -> C:\Users\Administrator\Desktop\sbs-c--\SBS-C-Plus-Plus-part2\Program\x64\Debug\Program.exe
+C:\Users\Administrator\Desktop\sbs-c--\SBS-C-Plus-Plus-part2\Program\Program\Program.cpp(248,3): error C2760: 구문 오류: 여기서 '}'은(는) 예상치 못한 오류였습니다. 예상된 오류는 ';'였습니다
+      C:\Users\Administrator\Desktop\sbs-c--\SBS-C-Plus-Plus-part2\Program\Program\Program.cpp(248,3):
+      템플릿 인스턴스화 컨텍스트(가장 오래된 인스턴스화 컨텍스트)가
+          C:\Users\Administrator\Desktop\sbs-c--\SBS-C-Plus-Plus-part2\Program\Program\Program.cpp(11,7):
+          클래스 템플릿 'Set'을(를) 컴파일하는 동안
+  
